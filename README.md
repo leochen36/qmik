@@ -1,259 +1,230 @@
-Ôö¼Ó1.2.22°æ±¾,
-1.ÓÅ»¯²¢½â¾ö²éÑ¯(closest)µÄbug
+å¢åŠ 1.2.23ç‰ˆæœ¬:1.å¢åŠ é«˜æ¸…å±çš„åˆ¤æ–­ Qmik.isRetinal, 2.ä¿®å¤éƒ¨åˆ†æ–‡æœ¬æ·»åŠ ä¼šé€ æˆçš„bug
 
-Ôö¼Ó1.2.20°æ±¾,
-1.ÓÅ»¯ÁË²éÑ¯,´ó·ùÌáÉıÁË²éÑ¯µÄĞÔÄÜ,
-2.¼õĞ¡ÁËºËĞÄ°æ±¾µÄÌå»ı,ºÏ²¢ºó¼õĞ¡µ½20.7kÁË,gzipÔÚ8k×óÓÒ.
-3.ÔöÇ¿ÁËÁËfn.liveÎ¯ÍĞÊÂ¼şµÄ¹¦ÄÜ,ie²âÊÔ×îµÍ´Óie9¿ªÊ¼
-4.Ôö¼ÓÁËÒ»¸ö¹ö¶¯²å¼şQmik.fn.scrollBar.js
-5.Ôö¼ÓÁËÒ»¸öÇ°½øºóÍË²å¼şQmik.nav.js,Qmik.nav²å¼şÒÀÀµºËĞÄsun¹¦ÄÜ
+å¢åŠ 1.2.22ç‰ˆæœ¬, 1.ä¼˜åŒ–å¹¶è§£å†³æŸ¥è¯¢(closest)çš„bug
 
-1.2.16°æ±¾ 
-ĞŞ¸´: 1.sunÄ£¿é¶Ô²¿·Öä¯ÀÀÆ÷¼ÓÔØµÄbug
-			2.getJSON ÉÙ´«data²ÎÊıÔì³ÉµÄbug
+å¢åŠ 1.2.20ç‰ˆæœ¬, 1.ä¼˜åŒ–äº†æŸ¥è¯¢,å¤§å¹…æå‡äº†æŸ¥è¯¢çš„æ€§èƒ½, 2.å‡å°äº†æ ¸å¿ƒç‰ˆæœ¬çš„ä½“ç§¯,åˆå¹¶åå‡å°åˆ°20.7käº†,gzipåœ¨8kå·¦å³. 3.å¢å¼ºäº†äº†fn.liveå§”æ‰˜äº‹ä»¶çš„åŠŸèƒ½,ieæµ‹è¯•æœ€ä½ä»ie9å¼€å§‹ 4.å¢åŠ äº†ä¸€ä¸ªæ»šåŠ¨æ’ä»¶Qmik.fn.scrollBar.js 5.å¢åŠ äº†ä¸€ä¸ªå‰è¿›åé€€æ’ä»¶Qmik.nav.js,Qmik.navæ’ä»¶ä¾èµ–æ ¸å¿ƒsunåŠŸèƒ½
 
-QmikÊÇÒ»¸ö¿ìËÙºÍ¾«¼òµÄJavaScript¿â£¬¼ò»¯ÁËHTMLÎÄµµ£¬ÊÂ¼ş´¦Àí£¬ÒÔ¼°Ajax½»»¥¡£ 
-Qmik.sun ¾Í°´Ğè¼ÓÔØÄ£¿é,ÇáËÉÊµÏÖ°´ĞèÒª¼ÓÔØÏàÓ¦µÄjs,cssÎÄ¼ş
-QmikµÄÓï·¨ÓëjqueryÊÇÒ»ÖÂµÄ,ºËĞÄ¿â´óĞ¡16-23k×óÓÒ,Ö§³Öuc,ie>=9,»ùÓÚwebkitÄÚºËµÄä¯ÀÀÆ÷(Èçchrom,safariµÈ),firefox; 
-	ÍÆ¼ö×öÒÆ¶¯web¿ª·¢.
-	
-API¼ò½é:<br/><br/>
+1.2.16ç‰ˆæœ¬ ä¿®å¤: 1.sunæ¨¡å—å¯¹éƒ¨åˆ†æµè§ˆå™¨åŠ è½½çš„bug 2.getJSON å°‘ä¼ dataå‚æ•°é€ æˆçš„bug
+
+Qmikæ˜¯ä¸€ä¸ªå¿«é€Ÿå’Œç²¾ç®€çš„JavaScriptåº“ï¼Œç®€åŒ–äº†HTMLæ–‡æ¡£ï¼Œäº‹ä»¶å¤„ç†ï¼Œä»¥åŠAjaxäº¤äº’ã€‚ Qmik.sun å°±æŒ‰éœ€åŠ è½½æ¨¡å—,è½»æ¾å®ç°æŒ‰éœ€è¦åŠ è½½ç›¸åº”çš„js,cssæ–‡ä»¶ Qmikçš„è¯­æ³•ä¸jqueryæ˜¯ä¸€è‡´çš„,æ ¸å¿ƒåº“å¤§å°16-23kå·¦å³,æ”¯æŒuc,ie>=9,åŸºäºwebkitå†…æ ¸çš„æµè§ˆå™¨(å¦‚chrom,safariç­‰),firefox; æ¨èåšç§»åŠ¨webå¼€å‘.
+
+APIç®€ä»‹:
 
 
+        encode(value) :ç­‰åŒäºencodeURIComponent
+        decode(value) :decodeURIComponent ,
+        isBool(value) : å¸ƒå°”åˆ¤æ–­,
+        isString(value) : å­—ç¬¦ä¸²åˆ¤æ–­,
+        isFun(value) : æ–¹æ³•åˆ¤æ–­,
+        isFunction(value) : æ–¹æ³•åˆ¤æ–­,
+        isNum(value) :æ•´å½¢åˆ¤æ–­ ,
+        isNumber : æ•´å½¢åˆ¤æ–­,
+        isArray(value) : æ•°ç»„åˆ¤æ–­,
+        isNull(value) : ç©ºæŒ‡é’ˆåˆ¤æ–­,
+        isRetinal() : åˆ¤æ–­æ˜¯å¦æ˜¯é«˜æ¸…å±,é»˜è®¤æ˜¯é«˜æ¸…å±
+        likeArray(value) : åƒæ•°ç»„,æœ‰lengthå­—æ®µç­‰ä¸€äº›å±æ€§,
+        each(value,function(i,val){}) : å¾ªç¯,
+        stringify(value) : jsonè½¬å­—ç¬¦ä¸²,
+        parseJSON(value) : å­—ç¬¦ä¸²è½¬json,
+        likeArray(value) : åƒæ•°ç»„
+        isDate(value) :,
+        isObject(value) : ,
+        isPlainObject(value) : 
+        likeNull(value) : åƒç©ºå€¼,å¦‚ "","null","undefined",nullç­‰ä¼šè¢«è®¤ä¸ºTrue,
+        inherit(subClass, superClass) : ç»§æ‰¿ç±» å­ç±»subClassç»§æ‰¿çˆ¶ç±»superClassçš„å±æ€§æ–¹æ³•, æ³¨:å­ç±»æœ‰çˆ¶ç±»çš„å±æ€§åŠæ–¹æ³•æ—¶,ä¸ä¼šè¢«çˆ¶ç±»æ›¿æ¢,
+        trim(value) :,
+        toLower(value) :å­—ç¬¦ä¸²å°å†™,
+        toUpper(value) : å¤§å†™,
 
-			encode(value) :µÈÍ¬ÓÚencodeURIComponent
-			decode(value) :decodeURIComponent ,
-			isBool(value) : ²¼¶ûÅĞ¶Ï,
-			isString(value) : ×Ö·û´®ÅĞ¶Ï,
-			isFun(value) : ·½·¨ÅĞ¶Ï,
-			isFunction(value) : ·½·¨ÅĞ¶Ï,
-			isNum(value) :ÕûĞÎÅĞ¶Ï ,
-			isNumber : ÕûĞÎÅĞ¶Ï,
-			isArray(value) : Êı×éÅĞ¶Ï,
-			isNull(value) : ¿ÕÖ¸ÕëÅĞ¶Ï,
-			likeArray(value) : ÏñÊı×é,ÓĞlength×Ö¶ÎµÈÒ»Ğ©ÊôĞÔ,
-			each(value,function(i,val){}) : Ñ­»·,
-			stringify(value) : json×ª×Ö·û´®,
-			parseJSON(value) : ×Ö·û´®×ªjson,
-			likeArray(value) : ÏñÊı×é
-			isDate(value) :,
-			isObject(value) : ,
-			isPlainObject(value) : 
-			likeNull(value) : Ïñ¿ÕÖµ,Èç "","null","undefined",nullµÈ»á±»ÈÏÎªTrue,
-			inherit(subClass, superClass) : ¼Ì³ĞÀà ×ÓÀàsubClass¼Ì³Ğ¸¸ÀàsuperClassµÄÊôĞÔ·½·¨, ×¢:×ÓÀàÓĞ¸¸ÀàµÄÊôĞÔ¼°·½·¨Ê±,²»»á±»¸¸ÀàÌæ»»,
-			trim(value) :,
-			toLower(value) :×Ö·û´®Ğ¡Ğ´,
-			toUpper(value) : ´óĞ´,
-			
-			merge(arr1,arr2) : merge,	// ºÏ²¢Êı×é»ò¶ÔÏó
-			array(array) : //ºÏ²¢³ÉÒ»¸öĞÂÊı×é,
-			inArray(value, array) : ÔÚÊı×éÀïµÄË÷ÒıÎ»,
-			unique(array) : Êı×éÈ¥ÖØ,
-			map(array, callback) : //¶ÔÊı×éÀïµÄÄÚÈİ,È«²¿×öÒ»´ÎÊı¾İÓ³Éä×ª»»,
-			getScript(url, success, error) :  È¡µÃ½Å±¾
-			getCss(url, success, error) :  È¡µÃcss
-			grep(array,callback):¹ıÂË
+        merge(arr1,arr2) : merge,   // åˆå¹¶æ•°ç»„æˆ–å¯¹è±¡
+        array(array) : //åˆå¹¶æˆä¸€ä¸ªæ–°æ•°ç»„,
+        inArray(value, array) : åœ¨æ•°ç»„é‡Œçš„ç´¢å¼•ä½,
+        unique(array) : æ•°ç»„å»é‡,
+        map(array, callback) : //å¯¹æ•°ç»„é‡Œçš„å†…å®¹,å…¨éƒ¨åšä¸€æ¬¡æ•°æ®æ˜ å°„è½¬æ¢,
+        getScript(url, success, error) :  å–å¾—è„šæœ¬
+        getCss(url, success, error) :  å–å¾—css
+        grep(array,callback):è¿‡æ»¤
 
-			param :  ³éÈ¡Êı×éÀïÃæÃ¿¸öÔªËØµÄnameºÍvalueÊôĞÔ,×ª»»³ÉÒ»¸öurlĞÎÊ½(a=b&name=g)µÄ×Ö·û´®,ÓĞ×öencode
-			now([date]) :   µ±Ç°Ê±¼ä
-			delay(fun, time,...)  ÑÓ³ÙÖ´ĞĞ,ÀàËÆsetTimeout,·µ»ØÒ»¸ö¶ÔÏó,¶ÔÏóÓĞ¸ö stop·½·¨,ÓÃÓÚÍ£Ö¹Ö´ĞĞ,...±íÊ¾Òª´«ÊäµÄ²ÎÊı,Èç:$.delay(function(a1,a2){},1000,1,2);//1 ¶ÔÓ¦ a1,2¶ÔÓ¦ a2
-			// 
-			/**
-			 * fun:Ö´ĞĞµÄ·½·¨
-			 * cycleTime:Ö´ĞĞµÄÖÜÆÚÊ±¼ä
-			 * ttl:¹ıÆÚÊ±¼ä,Ö´ĞĞÊ±¼ä>ttlÊ±,Í£Ö¹Ö´ĞĞ,µ¥Î» ms(ºÁÃë)
-			 * ,...±íÊ¾Òª´«ÊäµÄ²ÎÊı $.cycle(function(a1,a2){},1000,30000,1,2);//1 ¶ÔÓ¦ a1,2¶ÔÓ¦ a2
-			 */
-			cycle(fun, cycleTime, ttl,...) :  ÖÜÆÚÖ´ĞĞ,ÀàËÆÓÚsetInterval,»á·µ»ØÒ»¸ö¶ÔÏó,¶ÔÏóÓĞ¸ö stop·½·¨,ÓÃÓÚÍ£Ö¹Ö´ĞĞ
+        param :  æŠ½å–æ•°ç»„é‡Œé¢æ¯ä¸ªå…ƒç´ çš„nameå’Œvalueå±æ€§,è½¬æ¢æˆä¸€ä¸ªurlå½¢å¼(a=b&name=g)çš„å­—ç¬¦ä¸²,æœ‰åšencode
+        now([date]) :   å½“å‰æ—¶é—´
+        delay(fun, time,...)  å»¶è¿Ÿæ‰§è¡Œ,ç±»ä¼¼setTimeout,è¿”å›ä¸€ä¸ªå¯¹è±¡,å¯¹è±¡æœ‰ä¸ª stopæ–¹æ³•,ç”¨äºåœæ­¢æ‰§è¡Œ,...è¡¨ç¤ºè¦ä¼ è¾“çš„å‚æ•°,å¦‚:$.delay(function(a1,a2){},1000,1,2);//1 å¯¹åº” a1,2å¯¹åº” a2
+        // 
+        /**
+         * fun:æ‰§è¡Œçš„æ–¹æ³•
+         * cycleTime:æ‰§è¡Œçš„å‘¨æœŸæ—¶é—´
+         * ttl:è¿‡æœŸæ—¶é—´,æ‰§è¡Œæ—¶é—´>ttlæ—¶,åœæ­¢æ‰§è¡Œ,å•ä½ ms(æ¯«ç§’)
+         * ,...è¡¨ç¤ºè¦ä¼ è¾“çš„å‚æ•° $.cycle(function(a1,a2){},1000,30000,1,2);//1 å¯¹åº” a1,2å¯¹åº” a2
+         */
+        cycle(fun, cycleTime, ttl,...) :  å‘¨æœŸæ‰§è¡Œ,ç±»ä¼¼äºsetInterval,ä¼šè¿”å›ä¸€ä¸ªå¯¹è±¡,å¯¹è±¡æœ‰ä¸ª stopæ–¹æ³•,ç”¨äºåœæ­¢æ‰§è¡Œ
 
-			log(msg, event) : ´òÈÕÖ¾
-			isIphone : 
-			isAndroid :
-			isWP : 
-			isIE : 
-			isFF : is Firefox
-			isWK : is Webkit
-			isOpera : 
-			config(opts, _config) : 
+        log(msg, event) : æ‰“æ—¥å¿—
+        isIphone : 
+        isAndroid :
+        isWP : 
+        isIE : 
+        isFF : is Firefox
+        isWK : is Webkit
+        isOpera : 
+        config(opts, _config) : 
 
-			url(_url) : ºÏ²¢url,if ²ÎÊı _urlÎª¿Õ,Ôò
-			
-			ajax:function({
-				dataType:'json'|'text'|'jsonp',
-				async:bool,
-				type: 'get'|'post'
-				success,function(data){},
-				error:function(){}
-			});
+        url(_url) : åˆå¹¶url,if å‚æ•° _urlä¸ºç©º,åˆ™
 
-			
-2.²éÑ¯api:Ö§³ÖÏÂÃæµÄ²éÑ¯¸ñÊ½<br/><br/>
+        ajax:function({
+            dataType:'json'|'text'|'jsonp',
+            async:bool,
+            type: 'get'|'post'
+            success,function(data){},
+            error:function(){}
+        });
+2.æŸ¥è¯¢api:æ”¯æŒä¸‹é¢çš„æŸ¥è¯¢æ ¼å¼
 
 
-
-			$("#id") 
-			$(".class")
-			$("ul")
-			$("#id .class")
-			$("#id > .class")
-			$(".class div[flag=aaa]")	
-	
-3.Qmik.fn api(¼´ $("#id").api)<br/><br/>
+        $("#id") 
+        $(".class")
+        $("ul")
+        $("#id .class")
+        $("#id > .class")
+        $(".class div[flag=aaa]")   
+3.Qmik.fn api(å³ $("#id").api)
 
 
+        last : function() :æœ€åä¸€ä¸ª
+        eq : function(i)    :æŒ‡å®šä½ç½®
+        first : function()  :ç¬¬ä¸€ä¸ª
+        filter : function(f) :è¿‡æ»¤é€‰æ‹©
+        even : function()   :å¶æ•°ä¸ª
+        odd : function()    :å¥‡æ•°ä¸ª
+        gt : function(i) :
+        lt : function(i) :
+        find : function(s) 
+        each : function(f)
+        append : function(c)
+        remove : function()
+        before : function(c) 
+        after : function(c)
+        html : function(v)
+        empty : function() 
+        text : function(v) 
+        addClass : function(n) 
+        rmClass : function(n)  == removeClass
+        show : function()
+        hide : function() 
+        toggle : function()
+        toggleClass : function(className)
+        map : function(callback)
+        css : function(k, v) 
+        attr : function(k, v) 
+        rmAttr : function(k)    == removeAttr
+        data : function(k, v) 
+        rmData : function(k) == removeData
+        val : function(v)
 
-			last : function() :×îºóÒ»¸ö
-			eq : function(i) 	:Ö¸¶¨Î»ÖÃ
-			first : function() 	:µÚÒ»¸ö
-			filter : function(f) :¹ıÂËÑ¡Ôñ
-			even : function()	:Å¼Êı¸ö
-			odd : function() 	:ÆæÊı¸ö
-			gt : function(i) :
-			lt : function(i) :
-			find : function(s) 
-			each : function(f)
-			append : function(c)
-			remove : function()
-			before : function(c) 
-			after : function(c)
-			html : function(v)
-			empty : function() 
-			text : function(v) 
-			addClass : function(n) 
-			rmClass : function(n)  == removeClass
-			show : function()
-			hide : function() 
-			toggle : function()
-			toggleClass : function(className)
-			map : function(callback)
-			css : function(k, v) 
-			attr : function(k, v) 
-			rmAttr : function(k)	== removeAttr
-			data : function(k, v) 
-			rmData : function(k) == removeData
-			val : function(v)
-			
-			next : function(selector) //ÏÂÒ»¸öÖ¸¶¨ÔªËØ
-			prev : function(selector) //ÉÏÒ»¸öÖ¸¶¨ÔªËØ
-			clone : function(bool) 
-			hover : function(fin, fout) 
-			hasClass : function(c) 
-			closest : function(selector) //²éÕÒ×î½üµÄÆ¥ÅäµÄ¸¸(×æ¸¸)½Úµã
-			parents : function(selector) 
-			parent : function(selector) 
-			children : function(selector)
+        next : function(selector) //ä¸‹ä¸€ä¸ªæŒ‡å®šå…ƒç´ 
+        prev : function(selector) //ä¸Šä¸€ä¸ªæŒ‡å®šå…ƒç´ 
+        clone : function(bool) 
+        hover : function(fin, fout) 
+        hasClass : function(c) 
+        closest : function(selector) //æŸ¥æ‰¾æœ€è¿‘çš„åŒ¹é…çš„çˆ¶(ç¥–çˆ¶)èŠ‚ç‚¹
+        parents : function(selector) 
+        parent : function(selector) 
+        children : function(selector)
 
-			width:function();//¿í¶È
-			height:function()//¸ß¶È
-			offset:function() //return {top:xx,left:xx} »ñÈ¡Æ¥ÅäÔªËØÔÚµ±Ç°ÊÓ¿ÚµÄÏà¶ÔÆ«ÒÆ
-			position:function() //return {top:xx,left:xx}»ñÈ¡Æ¥ÅäÔªËØÏà¶Ô¸¸ÔªËØµÄÆ«ÒÆ
-			
+        width:function();//å®½åº¦
+        height:function()//é«˜åº¦
+        offset:function() //return {top:xx,left:xx} è·å–åŒ¹é…å…ƒç´ åœ¨å½“å‰è§†å£çš„ç›¸å¯¹åç§»
+        position:function() //return {top:xx,left:xx}è·å–åŒ¹é…å…ƒç´ ç›¸å¯¹çˆ¶å…ƒç´ çš„åç§»
+3.æŒ‰éœ€åŠ è½½ä¾‹å­:
 
-3.°´Ğè¼ÓÔØÀı×Ó:<br/><br/>
-	$.sun.use(["module1","module2"],function(module1,module2){});
-	$.sun.define(function(require, exports, module){});
-	$.sun.config();
+$.sun.use(["module1","module2"],function(module1,module2){}); $.sun.define(function(require, exports, module){}); $.sun.config();
 
-	a. Config.js ÎÄ¼ş,Ğ´ÈçÏÂÄÚÈİ:
-	
-	
-	
-			(function($) {
-				
-				$.config({
-					context : "/",// ÅäÖÃ¹¤³ÌµÄ·ÃÎÊÂ·¾¶,Èç¹ûÃ»ÓĞÅäÖÃ,Ä¬ÈÏ= /
-					debug:true//debugÄ£Ê½
-				});
-		
-				// ¶¨ÒåÄ£¿éÃû¼°ÇëÇóÂ·¾¶
-				$.sun.config({
-					//±ğÃûÏµÍ³,°ÑÂ·¾¶³éÏó³ÉÒ»¸ökeyÀ´±íÊ¾,ºóĞøÍ¨¹ıÕâ¸ökeyÀ´ÕÒµ½¶ÔÓ¦µÄurl
-					alias : {
-						// qmik×é¼ş
-						"Qmik.nav" : $.url("/assets/plugins/Qmik.nav.js"),//
-						///
-						//ÒµÎñÄ£¿é
-						"Home" : "module/home/Home.js",
-					},
-					preload : [//Ô¤¼ÓÔØ,ÔÚ¼ÓÔØÆäËüÄ£¿éÇ°,×îÓÅÏÈ¼ÓÔØÏÂÃæ¶¨ÒåµÄÄ£¿é
-						"Qmik.nav"
-					]
-				});
-			})(Qmik);
-	
-	
-	b.ÔÚindex.htmlÒ³ÃæÒıÈëjs<br/><br/>
-	
-	
-	
-			<!-- ¼ÓÔØ¿ò¼Ü -->
-			<script type="text/javascript" src="/xxxx/Qmik.js"></script>
-			<!-- ¼ÓÔØÅäÖÃÎÄ¼ş -->
-			<script type="text/javascript" src="/xxxx/Config.js"></script>
-  
-  
-  
-  c.ÊµÏÖHomeÒµÎñÄ£¿é¹¦ÄÜ
-  
-  
-  
-  		(function($) {
-  			function Home(nav){
-  				this.nav=nav;
-  			}
-  			Home.prototype.showHome=function(){
-  					var me=this;
-  					var main = $("#main_module");
-						$.get("module/home/home.html", function(data) {
-							main.html(data);//Ìî³äÄÚÈİ
-							me.doxxx();
-						});
-  			}
+a. Config.js æ–‡ä»¶,å†™å¦‚ä¸‹å†…å®¹:
 
-				Q.sun.define(function(require, exports, module) {
-					var nav = require("Nav");//ÒÀÀµµ¼º½Ä£¿é
-					exports=new Home(nav);
-				});
-			})(Qmik);
-			
-		
-			
-	 d.Ê¹ÓÃÄ£¿é,ÔÚindex.htmlÊ¹ÓÃ HomeÄ£¿é¹¦ÄÜ.  ÔÚindex.htmlµÄÎ²²¿¼ÓÈëÈçÏÂ´úÂë:
-	 
-	 
-	 
-		 	<script type="text/javascript">
-				// ½çÃæ³õÊ¼»¯ 
-				(function($) {
-					//ÒÀÀµ3¸öÄ£¿é³õÊ¼»¯
-					$.sun.use([
-						"Nav", "Home"
-					], function(nav, home) {
-							nav.doxxx();//ÏÔÊ¾Í·²¿µ¼º½
-							home.showHome();//ÏÔÊ¾Ê×Ò³
-					});
-				})(Qmik);
-			</script>
-			
-			
-			
-			
-			
-			
-4.ÏÂÔØÔ´Âë,×Ô¶¨Òå¹¹½¨(¹¹½¨Ê±,Ö»ÄÜÑ¡ÔñsrcÄ¿Â¼ÏÂµÄÎÄ¼şºÏ²¢³ÉÒ»¸öQmik.js,²»ÄÜ°üº¬pluginsµÈÆäËüÄ¿Â¼)
 
-		1.°²×°github¿Í»§¶Ë,ĞèÒªÊ¹ÓÃµ½git-shell  (http://windows.github.com/)
-		2.ÏÂÔØ nodejs ,°²×° ,http://nodejs.org/
-		3. °ÑnodejsµÄbinÅäÖÃµ½pathÀï,(ÒÑ¾­×Ô´øÁËnpm)
-		4.ÔËĞĞGit Shell,½øÈëÏÂÔØÏÂÀ´µÄÔ´ÂëµØÖ·,Èç¹ûd:/download/qmik/
-				Ö´ĞĞÃüÁî:
-				     	npm uninstall -g grunt  Ğ¶ÔØ 
-		        	npm install -g grunt-cli  (°Ñ°²×°ÍêºóµÄgruntÖ¸ÁîÌí¼Óµ½ pathÀï C:\Users\xxx\AppData\Roaming\npm)
-							npm install grunt-contrib-uglify  °²×°uglify 
-							npm install  grunt-contrib-cssmin  °²×°cssmin
-							npm install  grunt-contrib-qunit  °²×°cssmin
-							npm install  grunt-contrib-concat °²×°cssmin
-							npm install  grunt-contrib-clean  °²×°cssmin
-							
-			 °²×°Íê³Éºó,½øÈëÄ¿Â¼,Ö´ĞĞ  gruntÃüÁî,¿ªÊ¼×Ô¶¯¹¹½¨,¹¹½¨´úÂëºóµÄ´úÂë·ÅÔÚ assets Ä¿Â¼ÏÂ
-			 				
+
+        (function($) {
+
+            $.config({
+                context : "/",// é…ç½®å·¥ç¨‹çš„è®¿é—®è·¯å¾„,å¦‚æœæ²¡æœ‰é…ç½®,é»˜è®¤= /
+                debug:true//debugæ¨¡å¼
+            });
+
+            // å®šä¹‰æ¨¡å—ååŠè¯·æ±‚è·¯å¾„
+            $.sun.config({
+                //åˆ«åç³»ç»Ÿ,æŠŠè·¯å¾„æŠ½è±¡æˆä¸€ä¸ªkeyæ¥è¡¨ç¤º,åç»­é€šè¿‡è¿™ä¸ªkeyæ¥æ‰¾åˆ°å¯¹åº”çš„url
+                alias : {
+                    // qmikç»„ä»¶
+                    "Qmik.nav" : $.url("/assets/plugins/Qmik.nav.js"),//
+                    ///
+                    //ä¸šåŠ¡æ¨¡å—
+                    "Home" : "module/home/Home.js",
+                },
+                preload : [//é¢„åŠ è½½,åœ¨åŠ è½½å…¶å®ƒæ¨¡å—å‰,æœ€ä¼˜å…ˆåŠ è½½ä¸‹é¢å®šä¹‰çš„æ¨¡å—
+                    "Qmik.nav"
+                ]
+            });
+        })(Qmik);
+
+
+b.åœ¨index.htmlé¡µé¢å¼•å…¥js<br/><br/>
+
+
+
+        <!-- åŠ è½½æ¡†æ¶ -->
+        <script type="text/javascript" src="/xxxx/Qmik.js"></script>
+        <!-- åŠ è½½é…ç½®æ–‡ä»¶ -->
+        <script type="text/javascript" src="/xxxx/Config.js"></script>
+c.å®ç°Homeä¸šåŠ¡æ¨¡å—åŠŸèƒ½
+
+    (function($) {
+        function Home(nav){
+            this.nav=nav;
+        }
+        Home.prototype.showHome=function(){
+                var me=this;
+                var main = $("#main_module");
+                    $.get("module/home/home.html", function(data) {
+                        main.html(data);//å¡«å……å†…å®¹
+                        me.doxxx();
+                    });
+        }
+
+            Q.sun.define(function(require, exports, module) {
+                var nav = require("Nav");//ä¾èµ–å¯¼èˆªæ¨¡å—
+                exports=new Home(nav);
+            });
+        })(Qmik);
+
+
+
+ d.ä½¿ç”¨æ¨¡å—,åœ¨index.htmlä½¿ç”¨ Homeæ¨¡å—åŠŸèƒ½.  åœ¨index.htmlçš„å°¾éƒ¨åŠ å…¥å¦‚ä¸‹ä»£ç :
+
+
+
+        <script type="text/javascript">
+            // ç•Œé¢åˆå§‹åŒ– 
+            (function($) {
+                //ä¾èµ–3ä¸ªæ¨¡å—åˆå§‹åŒ–
+                $.sun.use([
+                    "Nav", "Home"
+                ], function(nav, home) {
+                        nav.doxxx();//æ˜¾ç¤ºå¤´éƒ¨å¯¼èˆª
+                        home.showHome();//æ˜¾ç¤ºé¦–é¡µ
+                });
+            })(Qmik);
+        </script>
+4.ä¸‹è½½æºç ,è‡ªå®šä¹‰æ„å»º(æ„å»ºæ—¶,åªèƒ½é€‰æ‹©srcç›®å½•ä¸‹çš„æ–‡ä»¶åˆå¹¶æˆä¸€ä¸ªQmik.js,ä¸èƒ½åŒ…å«pluginsç­‰å…¶å®ƒç›®å½•)
+
+    1.å®‰è£…githubå®¢æˆ·ç«¯,éœ€è¦ä½¿ç”¨åˆ°git-shell  (http://windows.github.com/)
+    2.ä¸‹è½½ nodejs ,å®‰è£… ,http://nodejs.org/
+    3. æŠŠnodejsçš„biné…ç½®åˆ°pathé‡Œ,(å·²ç»è‡ªå¸¦äº†npm)
+    4.è¿è¡ŒGit Shell,è¿›å…¥ä¸‹è½½ä¸‹æ¥çš„æºç åœ°å€,å¦‚æœd:/download/qmik/
+            æ‰§è¡Œå‘½ä»¤:
+                    npm uninstall -g grunt  å¸è½½ 
+                npm install -g grunt-cli  (æŠŠå®‰è£…å®Œåçš„gruntæŒ‡ä»¤æ·»åŠ åˆ° pathé‡Œ C:\Users\xxx\AppData\Roaming\npm)
+                        npm install grunt-contrib-uglify  å®‰è£…uglify 
+                        npm install  grunt-contrib-cssmin  å®‰è£…cssmin
+                        npm install  grunt-contrib-qunit  å®‰è£…cssmin
+                        npm install  grunt-contrib-concat å®‰è£…cssmin
+                        npm install  grunt-contrib-clean  å®‰è£…cssmin
+
+         å®‰è£…å®Œæˆå,è¿›å…¥ç›®å½•,æ‰§è¡Œ  gruntå‘½ä»¤,å¼€å§‹è‡ªåŠ¨æ„å»º,æ„å»ºä»£ç åçš„ä»£ç æ”¾åœ¨ assets ç›®å½•ä¸‹
