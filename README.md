@@ -31,7 +31,7 @@ Qmik是一个面向数据接口编程,代码模块化,mvc式的开发框架,数�
 
 微信第三方插件应用, webapp,hybrid app等
 
-[趋梦工厂(3D打印服务平台)](http://www.qudream.cn)
+[趋梦工厂(3D打印服务平台)](http://www.qudream.cn/?source=github)
 
 阿里双11
 
