@@ -1478,6 +1478,7 @@
 			isGet = Q.toUpper(_config.type) == "GET", //
 			success = _config.success, error = _config.error, //
 			thread,
+			header,
 			formData = Q.isString(conf.data) ? conf.data : Q.param(conf.data);
 		if (dataType == "jsonp") {
 			ajaxJSONP(_config, success, error);
@@ -1501,14 +1502,17 @@
 		}
 		Q.extend(xhr, _config.xhrFields||{});
 		xhr.open(_config.type, url, _config.async);
+
+		header = _config.header || {};
+
+		for(var name in header){//设置header头
+			xhr.setRequestHeader(name, header[name]);
+		}
+
 		xhr.setRequestHeader("Cache-Control", "no-cache");
 		xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+		header['Content-Type'] == null && !isGet && xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
-		!isGet && xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-
-		for(var name in _config.header){//设置header头
-			xhr.setRequestHeader(name.toUpperCase(), _config.header[name]);
-		}
 		xhr.send(isGet ? null : formData);
 		if (ttl > 0) thread = Q.delay(function() {
 			xhr.abort();
