@@ -7,13 +7,14 @@
 	var win = Q.global, toObject = Q.parseJSON, isFun = Q.isFun, //
 	_delete = Q._in._delete,
 	regUrl = /[\w\d_$-]+\s*=\s*\?/, jsonp = 1, prefex = "qjsonp", //
-	ac = {
+	defaultConfig = {
 		type : 'GET',
 		async : !0,
 		dataType : 'text',
         xhrFields: {
             //withCredentials:false
-        }
+        },
+		header: {}//http请求头
 	};
 	function request() {
 		return win.XMLHttpRequest && (win.location.protocol !== 'file:' || !win.ActiveXObject)	? new win.XMLHttpRequest()
@@ -51,10 +52,16 @@
 		if (ttl > 0) thread = Q.delay(err, ttl)
 	}
 	function ajax(conf) {
-		var _config = Q.extend({}, ac, conf), dataType = _config.dataType, ttl = _config.timeout, //
-		xhr = request(), url = Q.url(_config.url), isGet = Q.toUpper(_config.type) == "GET", //
-		success = _config.success, error = _config.error, //
-		thread,formData = Q.param(conf.data);
+		var _config = Q.extend({},
+				defaultConfig, conf),
+			dataType = _config.dataType,
+			ttl = _config.timeout, //
+			xhr = request(),
+			url = Q.url(_config.url),
+			isGet = Q.toUpper(_config.type) == "GET", //
+			success = _config.success, error = _config.error, //
+			thread,
+			formData = Q.isString(conf.data) ? conf.data : Q.param(conf.data);
 		if (dataType == "jsonp") {
 			ajaxJSONP(_config, success, error);
 			return;
@@ -75,11 +82,16 @@
 		if (isGet) {
 			url += (/\?/.test(url) ? "&" : "?") + formData;
 		}
-        Q.extend(xhr, _config.xhrFields||{});
+		Q.extend(xhr, _config.xhrFields||{});
 		xhr.open(_config.type, url, _config.async);
 		xhr.setRequestHeader("Cache-Control", "no-cache");
 		xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-		!isGet && xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');	
+
+		!isGet && xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+
+		for(var name in _config.header){//设置header头
+			xhr.setRequestHeader(name.toUpperCase(), _config.header[name]);
+		}
 		xhr.send(isGet ? null : formData);
 		if (ttl > 0) thread = Q.delay(function() {
 			xhr.abort();

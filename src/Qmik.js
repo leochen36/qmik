@@ -506,7 +506,7 @@
 		_delete: _delete
 	};
 	//////////////////////////////////////////////////////
-	Q.version = "2.2.22";
+	Q.version = "2.3.00";
 	Q.global = win;
 	win.Qmik = Q;
 	win.$ = win.$ || Q;

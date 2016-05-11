@@ -112,7 +112,9 @@ bower安装: bower install qmik
             type: 'get'|'post',
             timeout:100000,//超时时间
             success,function(data){},
-            error:function(){}
+            error:function(){},
+            header:{ //http请教头
+            }
         });
 
         series:function(tasks, callback)//串行执行任务列队,如果有输出参数,则前一个任务输出参数给下一个任务
@@ -438,6 +440,22 @@ c.实现Home业务模块功能
 
 
 ## 版本记录
+[增加2.3.00版本:](https://github.com/leochen36/qmik/tree/master/builds)
+<pre>
+2.3.00版本,
+优化ajax请求, 增加对req header 头的参数控制, 以对 Restful 接口风格更好的支持
+ajax:function({
+    dataType:'json'|'text'|'jsonp',
+    async:bool,(default:true)
+    type: 'get'|'post',
+    timeout:100000,//超时时间
+    success,function(data){},
+    error:function(){},
+    header:{ //http请教头
+    }
+});
+</pre>
+
 [增加2.2.22版本:](https://github.com/leochen36/qmik/tree/master/builds)
 <pre>
 2.2.22版本,
